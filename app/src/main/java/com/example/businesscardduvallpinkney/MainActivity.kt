@@ -127,4 +127,25 @@ fun ContactItem(icon: androidx.compose.ui.graphics.vector.ImageVector, text: Str
         Icon(
             imageVector = icon,
             contentDescription = null,
-            tint = Colo
+            tint = Color(0xFF3ddc84),
+            modifier = Modifier.size(20.dp)
+        )
+        Spacer(modifier = Modifier.width(12.dp))
+        Text(text = text, color = Color.White, fontSize = 16.sp)
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun BusinessCardPreview() {
+    BusinessCardDuvallPinkneyTheme {
+        BusinessCard(
+            name = "Duvall Pinkney",
+            title = "Software & Computer Engineer",
+            phone = "917-242-9975",
+            website = "https://duvallpinkney.com",
+            email = "duvall.p@duvallpinkney.com",
+            linkedin = "linkedin.com/in/duvall-pinkney-16949260"
+        )
+    }
+}
